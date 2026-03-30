@@ -102,7 +102,8 @@ public sealed class LinqExercises
     /// </summary>
     public IEnumerable<string> Task06_DoAllLecturersHaveDepartment()
     {
-        throw NotImplemented(nameof(Task06_DoAllLecturersHaveDepartment));
+        bool result = UniversityData.Lecturers.All(e => e.Department != null);
+        return [$"{result}"];
     }
 
     /// <summary>
@@ -116,7 +117,8 @@ public sealed class LinqExercises
     /// </summary>
     public IEnumerable<string> Task07_CountActiveEnrollments()
     {
-        throw NotImplemented(nameof(Task07_CountActiveEnrollments));
+        int result = UniversityData.Enrollments.Count(e => e.IsActive);
+        return [$"{result}"];
     }
 
     /// <summary>
